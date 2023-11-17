@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn</title>
+</head>
+
+<body>
+    <p>
+        Asynchronous programming is a technique that enables your program to start a potentially <br> long-running task and
+        still be able to be responsive to other events while that task runs,<br> rather than having to wait until that task
+        has finished. Once that task has finished, your program <br> is presented with the result.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "WPT is awesome";
+        }
+    </script>
+</body>
+
+</html>

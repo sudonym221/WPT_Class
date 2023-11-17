@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<body>
+    <p>
+        A callback is a function passed as an argument to another function
+
+        This technique allows a function to call another function
+
+        A callback function can run after another function has finished
+    </p>
+    <p id="demo"></p>
+
+    <script>
+        function display(something) {
+            document.getElementById("demo").innerHTML = something;
+        }
+
+        function calculator(num1, num2, cb) {
+            let sum = num1 + num2;
+            cb(sum);
+        }
+
+        calculator(8, 5, display);
+    </script>
+</body>
+
+</html>

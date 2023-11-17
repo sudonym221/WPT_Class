@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn</title>
+</head>
+
+<body>
+
+
+    "async and await make promises easier to write" <br><br>
+
+    async makes a function return a Promise <br><br>
+
+    await makes a function wait for a Promise <br><br>
+
+    <p id="demo"></p>
+
+</body>
+
+<script>
+    async function myDisplay() {
+        let myPromise = new Promise(function (resolve, reject) {
+            resolve("Hello there");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+    }
+
+    myDisplay();
+</script>
+
+</html>

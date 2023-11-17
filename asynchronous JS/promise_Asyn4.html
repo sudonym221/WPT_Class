@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn</title>
+</head>
+
+<body>
+    <p>
+        A Promise is a JavaScript object that links producing code and consuming code <br>
+        "Producing code" is code that can take some time <br>
+        "Consuming code" is code that must wait for the result <br>
+
+        <!-- 
+        
+        Syntax
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+            // "Producing Code" (May take some time)
+            
+              myResolve(); // when successful
+              myReject();  // when error
+            });
+            
+            // "Consuming Code" (Must wait for a fulfilled Promise)
+            myPromise.then(
+              function(value) { /* code if successful */ },
+              function(error) { /* code if some error */ }
+            ); 
+        -->
+    </p>
+    <script>
+        let myPromise = new Promise(function (myResolve, myReject) {
+            setTimeout(function () { myResolve("I love You !!"); }, 3000);
+        });
+
+        myPromise
+        .then(function (value) {
+            document.getElementById("demo").innerHTML = value;
+        })
+    </script>
+</body>
+
+</html>
